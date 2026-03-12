@@ -13,3 +13,4 @@ data/*.csv
 data/raw/
 data/processed/
 !data/.gitkeep
+.vercel
