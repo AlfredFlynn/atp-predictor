@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.next/
+out/
+build/
+*.log
+.DS_Store
+.env*.local
+.turbo
+coverage/
+*.tsbuildinfo
+data/*.csv
+data/raw/
+data/processed/
+!data/.gitkeep

@@ -1,0 +1,95 @@
+export interface RawMatch {
+  tourney_id: string;
+  tourney_name: string;
+  surface: string;
+  draw_size: string;
+  tourney_level: string;
+  tourney_date: string;
+  match_num: string;
+  winner_id: string;
+  winner_seed: string;
+  winner_entry: string;
+  winner_name: string;
+  winner_hand: string;
+  winner_ht: string;
+  winner_ioc: string;
+  winner_age: string;
+  winner_rank: string;
+  winner_rank_points: string;
+  loser_id: string;
+  loser_seed: string;
+  loser_entry: string;
+  loser_name: string;
+  loser_hand: string;
+  loser_ht: string;
+  loser_ioc: string;
+  loser_age: string;
+  loser_rank: string;
+  loser_rank_points: string;
+  score: string;
+  best_of: string;
+  round: string;
+  minutes: string;
+  w_ace: string;
+  w_df: string;
+  w_svpt: string;
+  w_1stIn: string;
+  w_1stWon: string;
+  w_2ndWon: string;
+  w_SvGms: string;
+  w_bpSaved: string;
+  w_bpFaced: string;
+  l_ace: string;
+  l_df: string;
+  l_svpt: string;
+  l_1stIn: string;
+  l_1stWon: string;
+  l_2ndWon: string;
+  l_SvGms: string;
+  l_bpSaved: string;
+  l_bpFaced: string;
+}
+
+export interface ProcessedMatch {
+  date: Date;
+  tourneyId: string;
+  tourneyName: string;
+  surface: string;
+  tourneyLevel: string;
+  round: string;
+  winnerId: string;
+  winnerName: string;
+  winnerRank: number | null;
+  winnerAge: number | null;
+  winnerHeight: number | null;
+  loserId: string;
+  loserName: string;
+  loserRank: number | null;
+  loserAge: number | null;
+  loserHeight: number | null;
+  score: string;
+  bestOf: number;
+  minutes: number | null;
+  winnerAces: number | null;
+  winnerDoubleFaults: number | null;
+  winnerFirstServeIn: number | null;
+  winnerFirstServeTotal: number | null;
+  winnerFirstServeWon: number | null;
+  winnerSecondServeWon: number | null;
+  loserAces: number | null;
+  loserDoubleFaults: number | null;
+  loserFirstServeIn: number | null;
+  loserFirstServeTotal: number | null;
+  loserFirstServeWon: number | null;
+  loserSecondServeWon: number | null;
+}
+
+export interface PlayerStats {
+  playerId: string;
+  playerName: string;
+  matches: number;
+  wins: number;
+  losses: number;
+  winRate: number;
+  surfaces: Record<string, { wins: number; losses: number }>;
+}

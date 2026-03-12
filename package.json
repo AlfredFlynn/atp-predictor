@@ -1,0 +1,24 @@
+{
+  "name": "atp-predictor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ATP Tennis Match Prediction System",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev": "npm run dev -w @atp/web",
+    "ingest": "npm run ingest -w @atp/data",
+    "process": "npm run process -w @atp/data",
+    "type-check": "npm run type-check --workspaces --if-present",
+    "clean": "rm -rf node_modules packages/*/node_modules apps/*/node_modules packages/*/dist apps/*/dist apps/*/.next"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
